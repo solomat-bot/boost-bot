@@ -374,9 +374,14 @@ body {
   color: var(--yellow);
 }
 .tip-link {
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--yellow);
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
-.tip-card:hover .tip-link {
-  opacity: 1;
+.tip-link:hover {
+  color: var(--blue);
+  text-shadow: 0 0 10px rgba(0,91,255,0.35);
 }
