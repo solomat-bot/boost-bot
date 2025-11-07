@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="./">
     <title>БУСТ | Финансовый навигатор</title>
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,27 @@
     <base href="https://bust-bot.netlify.app/">
     <base href="./">
 </head>
+  <title>БУСТ | Финансовый навигатор</title>
+
+  <!-- ⚡ Быстрая загрузка стилей -->
+  <link rel="preload" href="style.css" as="style">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+  <!-- ⚡ Мгновенный фон и плавное появление -->
+  <style>
+    body {
+      background: #0B1424;
+      color: #EAEAEA;
+      font-family: Inter, sans-serif;
+    }
+    .hero {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  </style>
+
+
 <body>
 
   <!-- Главный контейнер -->
@@ -18,7 +40,7 @@
     <!-- HERO -->
     <section class="screen screen--active" id="home">
       <header class="hero">
-        <img src="./assets/Logo_bust.png" alt="БУСТ" class="logo" />
+        <img src="./assets/Logo_bust.png" alt="БУСТ" class="logo" loading="lazy">
         <p class="tagline">Финансовый навигатор для селлеров</p>
         <h1 class="title">Ясность в цифрах — уверенность в решениях.</h1>
 
@@ -136,19 +158,19 @@
 
   <!-- Нижнее меню -->
   <nav class="tabbar" aria-label="Главная навигация">
-    <button class="tab is-active" data-target="home" aria-label="Главная">
+    <button class="tab is-active" data-target="home" aria-label="Главная" loading="lazy">
       <img src="assets/ic-home.svg" alt="" /><span>Главная</span>
     </button>
-    <button class="tab" data-target="services" aria-label="Услуги">
+    <button class="tab" data-target="services" aria-label="Услуги" loading="lazy">
       <img src="assets/ic-services.svg" alt="" /><span>Услуги</span>
     </button>
-    <button class="tab" data-target="clarity" aria-label="Точка Ясности">
+    <button class="tab" data-target="clarity" aria-label="Точка Ясности" loading="lazy">
       <img src="assets/ic-clarity.svg" alt="" /><span>Ясность</span>
     </button>
-    <button class="tab" data-target="tips" aria-label="Советы">
+    <button class="tab" data-target="tips" aria-label="Советы" loading="lazy">
       <img src="assets/ic-tips.svg" alt="" /><span>Советы</span>
     </button>
-    <button class="tab" data-target="assistant" aria-label="Ассистент">
+    <button class="tab" data-target="assistant" aria-label="Ассистент" loading="lazy">
       <img src="assets/ic-assistant.svg" alt="" /><span>Ассистент</span>
     </button>
   </nav>
@@ -257,6 +279,9 @@
     </div>
     </section>
 
-  <script src="script.js"></script>
+<link rel="preload" href="style.css" as="style">
+<link rel="stylesheet" href="style.css">
+
+<script src="script.js" defer></script>
 </body>
 </html>

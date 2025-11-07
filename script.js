@@ -98,3 +98,7 @@ function openTip(id) {
   `;
   document.body.appendChild(modal);
 }
+window.addEventListener("load", () => {
+  const hero = document.querySelector(".hero");
+  if (hero) hero.style.opacity = 1;
+});
