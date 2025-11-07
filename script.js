@@ -98,8 +98,3 @@ function openTip(id) {
   `;
   document.body.appendChild(modal);
 }
-document.querySelectorAll('.read-more').forEach(btn => {
-  btn.addEventListener('click', () => {
-    window.open('https://t.me/BustAppBot', '_blank');
-  });
-});
