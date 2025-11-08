@@ -55,7 +55,12 @@ document.querySelectorAll(".btn-details").forEach(btn => {
     const plan = plans[btn.dataset.plan];
     if (plan) {
       planTitle.textContent = plan.title;
-      planText.textContent = plan.text;
+      planText.innerHTML = `
+  ${plan.text}<br><br>
+  <a href="https://t.me/EugeniaYar" target="_blank" class="cta-btn cta-primary">
+    💬 Связаться с Евгенией
+  </a>
+`;
       planPopup.classList.add("active");
     }
   });
