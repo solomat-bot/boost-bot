@@ -385,3 +385,56 @@ body {
   color: var(--blue);
   text-shadow: 0 0 10px rgba(0,91,255,0.35);
 }
+/* 🌿 Нижнее меню */
+.nav-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #B0BAC1;
+  transition: all 0.25s ease;
+}
+
+/* 🌿 Единый стиль иконок */
+.nav-btn img {
+  width: 26px;                /* чуть меньше — гармоничнее */
+  height: 26px;
+  display: block;
+  margin: 0 auto 3px;         /* отступ между иконкой и текстом */
+  object-fit: contain;
+  filter: brightness(0.85) contrast(1.1);
+  transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+/* 🌿 Подписи */
+.nav-btn span {
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  line-height: 1;
+  color: #B0BAC1;
+  transition: color 0.3s ease;
+}
+
+/* 🌿 Наведение */
+.nav-btn:hover img {
+  filter: brightness(1) contrast(1.2) drop-shadow(0 0 4px rgba(163,192,178,0.35));
+  transform: translateY(-1px);
+}
+.nav-btn:hover span {
+  color: #CBBBA0;
+}
+
+/* 🌿 Активное состояние */
+.nav-btn.active img {
+  filter: drop-shadow(0 0 6px #3E6D8F) brightness(1.25) contrast(1.2);
+  transform: translateY(-1px);
+}
+.nav-btn.active span {
+  color: #A3C0B2;
+  font-weight: 600;
+}
